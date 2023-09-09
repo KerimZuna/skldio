@@ -1,0 +1,15 @@
+.square {
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid black;
+    margin: 10px auto;
+    text-align: center;
+    color: black;
+    background-color: #FBAD07;
+}
+
+.square img {
+    max-width: 100px;
+    max-height: 100px;
+    padding-top: 10px;
+}
