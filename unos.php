@@ -14,43 +14,50 @@
     <h1 style="text-align: center; padding-top: 10px;">UNOS</h1>
 <div class="container mt-4">
         <div class="row">
+            
             <div class="col-6">
                 <div class="square">
-                    <a href="unosArtikla.php">
-                    <img src="ikone/artikal.png" alt="Icon 1">
-                    <h6>ARTIKAL</h6>
+                    <a href="paleta.php">
+                    <img src="ikone/paleta.png" alt="Icon 2">
+                    <h6>PALETA</h6>
                     </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
-                    <img src="ikone/paleta.png" alt="Icon 2">
-                    <h6>PALETA</h6>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="square">
+                    <a href="kutija.php">
                     <img src="ikone/kutija.png" alt="Icon 3">
                     <h6>KUTIJA</h6>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="square">
-                    <img src="ikone/regal.png" alt="Icon 4">
-                    <h6>REGAL</h6>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="row">
+            
+            <div class="col-6">
+                <div class="square">
+                    <a href="regal.php">
+                    <img src="ikone/regal.png" alt="Icon 4">
+                    <h6>REGAL</h6>
+                    </a>
+                </div>
+            </div>
             <div class="col-6">
                 <div class="square">
                     <img src="ikone/hala.png" alt="Icon 5">
                     <h6>HALA</h6>
                 </div>
             </div>
-            
+        </div>
+        <div class="row">
+        <div class="col-6">
+            <a href="index.php">
+                <div class="square">
+                    <img src="ikone/nazad.png" alt="Icon 5">
+                    <h6>Nazad</h6>
+                </div>
+            </div>
+            </a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
