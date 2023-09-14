@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="max-width=device-max-width, initial-scale=1.0">
-    <title>WMS - AutoTarget</title>
+    <title>WMS - AutoTarget - Premjestanje</title>
     <link href="styles.css?v=1" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -18,8 +18,10 @@
         <div class="row">
             <div class="col-6">
                 <div class="square">
+                    <a href="premjestanje/artikalkutija.php">
                     <img style="max-height:100%; max-width:100%;" src="ikone/artikalkutija.png" alt="Icon 1">
                     <h6>ARTIKAL - KUTIJA</h6>
+                    </a>
                 </div>
             </div>
             <div class="col-6">

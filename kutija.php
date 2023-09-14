@@ -27,9 +27,9 @@
 									  <option value="9">9 </option>
                                       <option value="10">10</option>
                                </select>
-					<br/>
+					<br>
 					<center><button class="btn btn-primary" name="dodaj" id="dodaj">DODAJ</button></center>
-					<br/>
+					<br>
 			</form>
 
 			
