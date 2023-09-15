@@ -18,6 +18,7 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="manifest" href="manifest.json">
 
 </head>
 
@@ -76,8 +77,8 @@ if (!isset($_SESSION["user_id"])) {
             <div class="col-6">
                 <div class="square">
                     <a href="barcode/index.php">
-                    <img src="ikone/ikona8.png" alt="Icon 8">
-                    <h6>PRINT</h6>
+                        <img src="ikone/ikona8.png" alt="Icon 8">
+                        <h6>PRINT</h6>
                     </a>
                 </div>
             </div>
@@ -100,6 +101,7 @@ if (!isset($_SESSION["user_id"])) {
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -19,15 +19,15 @@
             <div class="col-6">
                 <div class="square">
                     <a href="premjestanje/artikalkutija.php">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/artikalkutija.png" alt="Icon 1">
-                    <h6>ARTIKAL - KUTIJA</h6>
+                        <img style="max-height:100%; max-width:100%;" src="ikone/artikalkutija.png" alt="Icon 1">
+                        <h6>ARTIKAL-KUTIJA</h6>
                     </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
                     <img style="max-height:100%; max-width:100%;" src="ikone/artikalpaletaa.png" alt="Icon 2">
-                    <h6>ARTIKAL - PALETA</h6>
+                    <h6>ARTIKAL-PALETA</h6>
                 </div>
             </div>
         </div>
@@ -35,13 +35,13 @@
             <div class="col-6">
                 <div class="square">
                     <img style="max-height:100%; max-width:100%;" src="ikone/artikalregal.png" alt="Icon 3">
-                    <h6>ARTIKAL - REGAL</h6>
+                    <h6>ARTIKAL-REGAL</h6>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
                     <img style="max-height:100%; max-width:100%;" src="ikone/kutijapaleta.png" alt="Icon 4">
-                    <h6>KUTIJA - PALETA</h6>
+                    <h6>KUTIJA-PALETA</h6>
                 </div>
             </div>
         </div>
@@ -49,13 +49,13 @@
             <div class="col-6">
                 <div class="square">
                     <img style="max-height:100%; max-width:100%;" src="ikone/kutijaregal.png" alt="Icon 5">
-                    <h6>KUTIJA - REGAL</h6>
+                    <h6>KUTIJA-REGAL</h6>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
                     <img style="max-height:100%; max-width:100%;" src="ikone/regalregal.png" alt="Icon 6">
-                    <h6>REGAL - REGAL</h6>
+                    <h6>REGAL-REGAL</h6>
                 </div>
             </div>
         </div>
