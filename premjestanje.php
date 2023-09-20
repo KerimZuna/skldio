@@ -26,8 +26,10 @@
             </div>
             <div class="col-6">
                 <div class="square">
+                    <a href="premjestanje/artikalpaleta.php">
                     <img style="max-height:100%; max-width:100%;" src="ikone/artikalpaletaa.png" alt="Icon 2">
                     <h6>ARTIKAL-PALETA</h6>
+                    </a>
                 </div>
             </div>
         </div>

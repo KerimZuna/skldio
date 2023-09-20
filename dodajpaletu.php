@@ -17,27 +17,13 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
 
         $code = $last_id;
 
-        $img_url = "http://localhost/dio/barcode/barcode.php?codetype=Code39&size=50&text=" . $code . "&print=true";
-        echo '<img src=barcode/barcode.php?codetype=Code39&size=50&text=" . $code . "&print=true">';
-        $ch = curl_init();
+        file_put_contents('C:\xampp\htdocs\dio\barcode\python\print\output.txt', $code);
+        sleep(2);
+        $printer = "192.168.0.195";
+    
+        $command = 'python C:\xampp\htdocs\dio\barcode\python\print\print.py';
 
-        curl_setopt($ch, CURLOPT_URL, $img_url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        $image_content = curl_exec($ch);
-
-        curl_close($ch);
-
-        if ($image_content !== false) {
-            $image_path = "barcode/slike/palete/" . $code . ".png";
-
-            if (file_put_contents($image_path, $image_content) !== false) {
-            } else {
-                echo "Failed to save the image.";
-            }
-        } else {
-            echo "Failed to fetch the image content from the URL: $img_url";
-        }
+        exec($command);
     }
     header("Location: paleta.php");
 }
