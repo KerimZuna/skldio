@@ -6,7 +6,7 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
     $lokacija = 'Garaža';
 
     for ($i = 1; $i <= $broj; $i++) {
-        $sql = "INSERT INTO palete (lokacija) VALUES ('$lokacija')";
+        $sql = "INSERT INTO artikli (lokacija) VALUES ('$lokacija')";
 
         if ($conn->query($sql) === TRUE) {
             $last_id = $conn->insert_id;
@@ -25,7 +25,7 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
 
         exec($command);
     }
-    header("Location: paleta.php");
+    header("Location: artikal.php");
 }
 
 ?>

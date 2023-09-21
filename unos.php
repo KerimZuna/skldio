@@ -17,12 +17,11 @@
 <body>
     <div class="container mt-2">
         <div class="row">
-
             <div class="col-6">
                 <div class="square">
-                    <a href="paleta.php">
-                        <img src="ikone/paleta.png" alt="Icon 2">
-                        <h6>PALETA</h6>
+                    <a href="artikal.php">
+                        <img src="ikone/artikal.png" alt="Icon 2">
+                        <h6>ARTIKAL</h6>
                     </a>
                 </div>
             </div>
@@ -46,21 +45,32 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="square">
-                    <img src="ikone/hala.png" alt="Icon 5">
-                    <h6>HALA</h6>
-                </div>
+                <a href="hala.php">
+                    <div class="square">
+                        <img src="ikone/hala.png" alt="Icon 5">
+                        <h6>HALA</h6>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
+                <div class="square">
+                    <a href="paleta.php">
+                        <img src="ikone/paleta.png" alt="Icon 2">
+                        <h6>PALETA</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6">
                 <a href="index.php">
                     <div class="square">
                         <img src="ikone/nazad.png" alt="Icon 5">
-                        <h6>Nazad</h6>
+                        <h6>NAZAD</h6>
                     </div>
             </div>
             </a>
+
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>

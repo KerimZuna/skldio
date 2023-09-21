@@ -66,10 +66,12 @@ if (!isset($_SESSION["user_id"])) {
                 </div>
             </div>
             <div class="col-6">
-                <div class="square">
-                    <img src="ikone/pretraga.png" alt="Icon 4">
-                    <h6>PRETRAGA</h6>
-                </div>
+                <a href="pretraga.php">
+                    <div class="square">
+                        <img src="ikone/pretraga.png" alt="Icon 4">
+                        <h6>PRETRAGA</h6>
+                    </div>
+                </a>
             </div>
         </div>
 

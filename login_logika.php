@@ -24,6 +24,5 @@ if ($result->num_rows > 0) {
     echo "Neuspješan login. Provjerite korisničko ime ili šifru!";
 }
 
-// Close the database connection
 $conn->close();
 ?>

@@ -44,12 +44,8 @@
 		</center>
 	</a>
 	<script>
-		// Add a click event listener to the "DODAJ" button
 		document.getElementById("dodaj").addEventListener("click", function (e) {
-			// Get the selected value from the "broj" select element
 			const selectedValue = document.getElementById("broj").value;
-
-			// Check if a value is selected (not the default "Broj" option)
 			if (selectedValue !== "Broj") {
 				alert("Uspjesno ste dodali " + selectedValue + ' palete/a');
 			} else {
