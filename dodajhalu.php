@@ -12,7 +12,7 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
             $last_id = $conn->insert_id;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
-            break; // Exit the loop if there's an error in one iteration
+            break;
         }
 
         $code = $last_id;
