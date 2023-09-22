@@ -12,7 +12,7 @@ if (isset($_POST['premjesti'])) {
     }
 
     foreach ($_POST['idArtikla'] as $key => $idArtikla) {
-        $query = "SELECT lokacija FROM kutije WHERE kutija_id = '$idKutije'";
+        $query = "SELECT lokacija,kapacitet,slobodno FROM kutije WHERE kutija_id = '$idKutije'";
         $result = $conn->query($query);
 
         if ($result === false) {
@@ -20,10 +20,22 @@ if (isset($_POST['premjesti'])) {
         } elseif ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $lokacija = $row['lokacija'];
-            $artikliquery = "SELECT id_artikla FROM artikli WHERE id_artikla = '$idArtikla'";
+            $kapacitet = $row['kapacitet'];
+            $slobodno = $row['slobodno'];
+
+            $artikliquery = "SELECT id_artikla, id_kutije FROM artikli WHERE id_artikla = '$idArtikla'";
             $rezultat = $conn->query($artikliquery);
             $red = $rezultat->fetch_assoc();
             $artikal = $red['id_artikla'];
+            $proslaKutija = $red['id_kutije'];
+
+            $kutijaquery = "SELECT kapacitet, slobodno FROM kutije WHERE kutija_id = '$proslaKutija'";
+                $kut = $conn->query($kutijaquery);
+                $red1 = $kut->fetch_assoc();
+                $pkKapacitet = $red1['kapacitet'];
+                $pkSlobodno = $red1['slobodno'];
+
+                file_put_contents("uahrvatska.txt", "$pkSlobodno, $slobodno");
 
             if ($artikal != $idArtikla){
             $sql = "INSERT INTO artikli (id_artikla, id_kutije, lokacija)
@@ -44,12 +56,46 @@ if (isset($_POST['premjesti'])) {
                 echo "Error: " . $sql_other_table . "<br>" . $conn->error;
                 break;
             }
-            }
+            if ($slobodno == 0) {
+                echo "Kutija nema kapacitet, molimo unesite drugu kutiju.";
+            } else{
+                $slobodno--;
+                $sql_kutije = "UPDATE kutije SET slobodno = $slobodno WHERE kutija_id = '$idKutije'";
+                if ($conn->query($sql_kutije) !== TRUE) {
+                    echo "Error: " . $sql_kutije . "<br>" . $conn->error;
+                }
+            }  
+            
+        }
             else{
             $sql_update = "UPDATE artikli
             SET id_kutije = '$idKutije',
                 lokacija = '$lokacija'
             WHERE id_artikla = '$idArtikla'";
+
+
+
+            if ($slobodno == 0) {
+                echo "Kutija nema kapacitet, molimo unesite drugu kutiju.";
+            } else if ($proslaKutija == $idKutije) {
+                $sql_kutije = "UPDATE kutije SET slobodno = $slobodno WHERE kutija_id = '$idKutije'";
+                if ($conn->query($sql_kutije) !== TRUE) {
+                    echo "Error: " . $sql_kutije . "<br>" . $conn->error;
+                }
+
+
+            } else {
+                $slobodno--;
+                $pkSlobodno++;
+                $sql_update_stara_kutija = "UPDATE kutije SET slobodno = $slobodno WHERE kutija_id = '$idKutije'";
+                $sql_update_nova_kutija = "UPDATE kutije SET slobodno = $pkSlobodno WHERE kutija_id = '$proslaKutija'";
+                if ($conn->query($sql_update_stara_kutija) !== TRUE) {
+                    echo "Error: " . $sql_update_stara_kutija . "<br>" . $conn->error;
+                }
+                if ($conn->query($sql_update_nova_kutija) !== TRUE) {
+                    echo "Error: " . $sql_update_nova_kutija. "<br>" . $conn->error;
+                }
+            }
 
             if ($conn->query($sql_update) === TRUE) {
                 if ($conn->affected_rows > 0) {

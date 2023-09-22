@@ -47,8 +47,10 @@ if (!isset($_SESSION["user_id"])) {
         <div class="row">
             <div class="col-6">
                 <div class="square">
+                <a href="izlazrobe.php">
                     <img src="ikone/ikona10.png" alt="Icon 10">
                     <h6>IZLAZ ROBE</h6>
+                    </a>
                 </div>
             </div>
             <div class="col-6">
