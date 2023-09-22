@@ -13,6 +13,7 @@ $conn->close();
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>MySQL Table Viewer</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -21,11 +22,11 @@ $conn->close();
             height: 100% !important;
             background-color: #FBAD07 !important;
             background-color: #FBAD07 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px!important;
-    width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px !important;
+            width: 100%;
         }
 
         form {
@@ -33,19 +34,20 @@ $conn->close();
             width: 100%;
             justify-content: center;
             align-items: center;
-            
+
         }
 
-        table{
+        table {
             border: 2px black solid;
         }
 
-        th{
+        th {
             text-align: center;
-            padding: 10px;   
+            padding: 10px;
             border: 2px black solid;
         }
-        td{
+
+        td {
             border: 2px black solid;
         }
 
@@ -88,6 +90,7 @@ $conn->close();
     </style>
     </style>
 </head>
+
 <body>
     <table>
         <thead>
@@ -110,4 +113,5 @@ $conn->close();
         </tbody>
     </table>
 </body>
+
 </html>
