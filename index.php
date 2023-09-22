@@ -26,30 +26,35 @@ if (!isset($_SESSION["user_id"])) {
     <div class="container mt-2">
         <div class="row">
 
-            <div class="col-6">
-                <div class="square">
+            <div class="col-6"><a href="unos.php">
+                    <div class="square">
 
-                    <a href="unos.php">
+
                         <img src="ikone/ikona1.png" alt="Icon 1">
                         <h6>UNOS</h6>
-                    </a>
-                </div>
+
+                    </div>
+                </a>
             </div>
             <div class="col-6">
-                <div class="square">
-                    <a href="premjestanje.php">
+                <a href="premjestanje.php">
+                    <div class="square">
+
                         <img src="ikone/ikona2.png" alt="Icon 2">
                         <h6>PREMJEŠTANJE</h6>
-                    </a>
-                </div>
+
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="square">
-                    <img src="ikone/ikona10.png" alt="Icon 10">
-                    <h6>IZLAZ ROBE</h6>
-                </div>
+                <a href="izlaz.php">
+                    <div class="square">
+                        <img src="ikone/ikona10.png" alt="Icon 10">
+                        <h6>IZLAZ ROBE</h6>
+                    </div>
+                </a>
             </div>
             <div class="col-6">
                 <div class="square">
