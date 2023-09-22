@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563
+=======
+class ComposerStaticInit48dcdf7df3e72869b09faaeb7901edf8
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
 {
     public static $prefixLengthsPsr4 = array (
         'Z' => 
@@ -20,6 +24,13 @@ class ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563
             'Psr\\Container\\' => 14,
             'Picqer\\Barcode\\' => 15,
         ),
+<<<<<<< HEAD
+=======
+        'M' => 
+        array (
+            'Mike42\\' => 7,
+        ),
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
         'I' => 
         array (
             'Interop\\Container\\' => 18,
@@ -55,6 +66,13 @@ class ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563
         array (
             0 => __DIR__ . '/..' . '/picqer/php-barcode-generator/src',
         ),
+<<<<<<< HEAD
+=======
+        'Mike42\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mike42/escpos-php/src/Mike42',
+        ),
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -68,9 +86,15 @@ class ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit30bfbb7f96c0ea95b6d004cf4f77e563::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInit48dcdf7df3e72869b09faaeb7901edf8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit48dcdf7df3e72869b09faaeb7901edf8::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit48dcdf7df3e72869b09faaeb7901edf8::$classMap;
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
 
         }, null, ClassLoader::class);
     }

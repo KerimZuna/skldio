@@ -20,12 +20,12 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
         file_put_contents('C:\xampp\htdocs\dio\barcode\python\print\output.txt', $code);
         sleep(2);
         $printer = "192.168.0.195";
-    
+
         $command = 'python C:\xampp\htdocs\dio\barcode\python\print\print.py';
 
         exec($command);
     }
     header("Location: kutija.php");
 }
-    
+
 ?>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Center the content vertically and horizontally */
 body {
     display: flex!important;
@@ -54,3 +55,61 @@ body {
     display: block!important;
     margin-top: 20px!important;
 }
+=======
+/* Center the content vertically and horizontally */
+body {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    height: 100vh!important;
+    background-color: #fff!important; /* Set the background color */
+    font-size: 20px!important;
+}
+
+/* Style the form container */
+.well {
+    background-color: #FBAD07!important; /* Set the background color of the form */
+    border-radius: 10px!important;
+    padding: 20px!important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)!important;
+}
+
+/* Style the label and input */
+.form-group label {
+    font-weight: bold!important;
+    color: #333!important; /* Set label text color */
+}
+
+.form-control {
+    width: 80%!important;
+    border-color: #FBAD07!important; /* Set input border color */
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+/* Style the "Generate" button */
+.btn-primary {
+    background-color: #212529!important; /* Set button background color */
+    border-color: #212529!important; /* Set button border color */
+    color: #fff!important; /* Set button text color */
+    width: 80%!important;
+    font-size: 20px!important;
+}
+
+.btn-primary:hover {
+    background-color: #f60!important; /* Set button background color on hover */
+    border-color: #f60!important; /* Set button border color on hover */
+}
+
+/* Center the button */
+.center-button {
+    text-align: center!important;
+}
+
+/* Style the generated image */
+.generated-image {
+    max-width: 100%!important;
+    display: block!important;
+    margin-top: 20px!important;
+}
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320

@@ -13,5 +13,9 @@ return array(
     'Zend\\Barcode\\' => array($vendorDir . '/zendframework/zend-barcode/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Picqer\\Barcode\\' => array($vendorDir . '/picqer/php-barcode-generator/src'),
+<<<<<<< HEAD
+=======
+    'Mike42\\' => array($vendorDir . '/mike42/escpos-php/src/Mike42'),
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
 );
