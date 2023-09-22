@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" type="text/css" href="kutija.css?v=3" />
+	<link rel="stylesheet" type="text/css" href="kutija.css?v=1" />
 	<meta charset="UTF-8" name="viewport" content="width=device-width" />
 	<title>WMS - AutoTarget - Dodaj regal</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div class="col-md-6 well vh-100">
+	<div class="col-md-6 vh-100">
 		<form method="POST" enctype="multipart/form-data" action="dodajregal.php">
 			<div class="form-group" style="margin-top:60px">
 				<center><label for="broj">UNESITE BROJ REGALA:</label></center>

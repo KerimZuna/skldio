@@ -2,7 +2,7 @@
 body {
 
     height: 100% !important;
-    background-color: #fff !important;
+    background-color: #FBAD07 !important;
     /* Set the background color */
     font-size: 20px !important;
 }
@@ -14,18 +14,6 @@ form {
     align-items: center;
 }
 
-/* Style the form container */
-.well {
-    background-color: #FBAD07 !important;
-    /* Set the background color of the form */
-    border-radius: 10px !important;
-    padding: 20px !important;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-/* Style the label and input */
 .form-group label {
     font-weight: bold !important;
     color: #333 !important;

@@ -1,3 +1,7 @@
+body {
+  background-color: #FBAD07;
+}
+
 .square {
   width: 100%;
   max-width: 200px;

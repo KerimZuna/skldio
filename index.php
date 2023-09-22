@@ -57,18 +57,22 @@ if (!isset($_SESSION["user_id"])) {
                 </a>
             </div>
             <div class="col-6">
-                <div class="square">
-                    <img src="ikone/ikona6.png" alt="Icon 6">
-                    <h6>HISTORIJA</h6>
-                </div>
+                <a href="historija.php">
+                    <div class="square">
+                        <img src="ikone/ikona6.png" alt="Icon 6">
+                        <h6>HISTORIJA</h6>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="square">
-                    <img src="ikone/izvjestaj.png" alt="Icon 3">
-                    <h6>IZVJEŠTAJ</h6>
-                </div>
+                <a href="izvjestaj.php">
+                    <div class="square">
+                        <img src="ikone/izvjestaj.png" alt="Icon 3">
+                        <h6>IZVJEŠTAJ</h6>
+                    </div>
+                </a>
             </div>
             <div class="col-6">
                 <a href="pretraga.php">
@@ -82,28 +86,30 @@ if (!isset($_SESSION["user_id"])) {
 
         <div class="row">
             <div class="col-6">
-                <div class="square">
-                    <a href="barcode/index.php">
+                <a href="barcode/index.php">
+                    <div class="square">
                         <img src="ikone/ikona8.png" alt="Icon 8">
                         <h6>PRINT</h6>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
             <div class="col-6">
-                <div class="square">
-                    <img src="ikone/postavke.png" alt="Icon 5">
-                    <h6>POSTAVKE</h6>
-                </div>
+                <a href="postavke.php">
+                    <div class="square">
+                        <img src="ikone/postavke.png" alt="Icon 5">
+                        <h6>POSTAVKE</h6>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="square">
-                    <a href="logout.php">
+                <a href="logout.php">
+                    <div class="square">
                         <img src="ikone/ikona11.png" alt="Icon 9">
                         <h6>ODJAVA</h6>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
