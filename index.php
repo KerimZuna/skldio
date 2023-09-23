@@ -65,8 +65,10 @@ if (!isset($_SESSION["user_id"])) {
         <div class="row">
             <div class="col-6">
                 <div class="square">
+                    <a href="izvjestaj.php">
                     <img src="ikone/izvjestaj.png" alt="Icon 3">
                     <h6>IZVJEŠTAJ</h6>
+                    </a>
                 </div>
             </div>
             <div class="col-6">
