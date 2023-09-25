@@ -92,21 +92,12 @@ if (!isset($_SESSION["user_id"])) {
             </div>
             <div class="col-6">
                 <div class="square">
-                    <img src="ikone/postavke.png" alt="Icon 5">
-                    <h6>POSTAVKE</h6>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="square">
                     <a href="logout.php">
                         <img src="ikone/ikona11.png" alt="Icon 9">
                         <h6>ODJAVA</h6>
                     </a>
                 </div>
             </div>
-        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>

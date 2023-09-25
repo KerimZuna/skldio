@@ -62,6 +62,14 @@
             </div>
         </div>
         <div class="row">
+        <div class="col-6">
+            <a href="premjestanje/lokacija.php">
+                <div class="square">
+                    <img style="max-height:100%; max-width:100%;" src="ikone/lokacijakutije.png" alt="Icon 6">
+                    <h6>LOKACIJA</h6>
+                </div>
+                </a>
+            </div>
             <div class="col-6">
                 <a href="index.php">
                     <div class="square">
