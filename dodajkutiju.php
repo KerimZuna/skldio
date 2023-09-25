@@ -24,6 +24,7 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
         $command = 'python C:\xampp\htdocs\dio\barcode\python\print\print.py';
 
         exec($command);
+        ini_set('display_errors', 1);
     }
     header("Location: kutija.php");
 }

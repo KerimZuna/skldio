@@ -19,60 +19,6 @@ body {
 }
 
 a:link {
-<<<<<<< HEAD
-    color: black;
-    text-decoration: none;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: black;
-    text-decoration: none;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: black;
-    text-decoration: none;
-  }
-  
-  /* selected link */
-  a:active {
-    color: black;
-    text-decoration: none;
-  }
-
-  /* Set the background color to orange */
-body {
-  background-color: orange;
-}
-
-/* Make text color white for better contrast */
-body, h2, label, select, button {
-  color: black;
-}
-
-/* Style the form elements to match the orange theme */
-.form-control{
-  background-color: white;
-  border-color:black;
-  color: black;
-}
-
-/* Style the button on hover for a subtle effect */
-.btn-primary {
-  background-color: #212529!important; /* Set button background color */
-  border-color: #212529!important; /* Set button border color */
-  color: #fff!important; /* Set button text color */
-  width: 80%!important;
-  font-size: 20px!important;
-}
-
-.btn-primary:hover {
-  background-color: #f60!important; /* Set button background color on hover */
-  border-color: #f60!important; /* Set button border color on hover */
-
-=======
   color: black;
   text-decoration: none;
 }
@@ -93,5 +39,45 @@ a:hover {
 a:active {
   color: black;
   text-decoration: none;
->>>>>>> main
+}
+
+/* Set the background color to orange */
+body {
+  background-color: orange;
+}
+
+/* Make text color white for better contrast */
+body,
+h2,
+label,
+select,
+button {
+  color: black;
+}
+
+/* Style the form elements to match the orange theme */
+.form-control {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+/* Style the button on hover for a subtle effect */
+.btn-primary {
+  background-color: #212529 !important;
+  /* Set button background color */
+  border-color: #212529 !important;
+  /* Set button border color */
+  color: #fff !important;
+  /* Set button text color */
+  width: 80% !important;
+  font-size: 20px !important;
+}
+
+.btn-primary:hover {
+  background-color: #f60 !important;
+  /* Set button background color on hover */
+  border-color: #f60 !important;
+  /* Set button border color on hover */
+
 }
