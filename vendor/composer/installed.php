@@ -28,6 +28,8 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
+=======
         'mike42/escpos-php' => array(
             'pretty_version' => 'v2.2',
             'version' => '2.2.0.0',
@@ -37,6 +39,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
         'picqer/php-barcode-generator' => array(
             'pretty_version' => 'v2.3.3',
             'version' => '2.3.3.0',

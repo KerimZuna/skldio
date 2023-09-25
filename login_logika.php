@@ -19,12 +19,10 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $_SESSION["user_id"] = $row["ID"];
-    $_SESSION["username"] = $username;
     header("Location: index.php");
 } else {
     echo "Neuspješan login. Provjerite korisničko ime ili šifru!";
 }
 
-// Close the database connection
 $conn->close();
 ?>

@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css?v=4"/>
-    <meta charset="UTF-8" name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="style.css?v=4" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>WMS - AutoTarget</title>
 </head>
+
 <body>
     <div class="col-6 well">
         <form method="POST" enctype="multipart/form-data" action="logika/artikalpaleta.php">
             <div class="row">
                 <div class="col-8" id="inputFieldsContainer">
                     <input type="number" class="form-control mb-5" placeholder="Unesite artikal" id="dodajArtikal">
-                    
-                    <div class="col-4"><button class="btn btn-primary" style="height: 38px; margin-left: 20px; padding:inherit;"type="button" name="dodaj" id="dodaj">Dodaj</button></div>
+
+                    <div class="col-4"><button class="btn btn-primary"
+                            style="height: 38px; margin-left: 20px; padding:inherit;" type="button" name="dodaj"
+                            id="dodaj">Dodaj</button></div>
                 </div>
             </div>
             <div class="col-10">
@@ -31,19 +37,22 @@
             </div>
 
             <label for="idPalete">ID palete:</label>
-            <input class="form-control mt-3" type="number" id="idPalete" name="idPalete" placeholder="Unesite id palete">
+            <input class="form-control mt-3" type="number" id="idPalete" name="idPalete"
+                placeholder="Unesite id palete">
             <br><br>
 
             <button class="btn btn-primary" id="premjesti" name="premjesti">Premjesti</button>
         </form>
-        <a href="../premjestanje.php"><center><button class="btn btn-primary mt-5 mb-2" name="nazad">NAZAD</button></center></a>
+        <a href="../premjestanje.php">
+            <center><button class="btn btn-primary mt-5 mb-2" name="nazad">NAZAD</button></center>
+        </a>
     </div>
 
     <script>
         function displayMessageFromURL() {
             const urlParams = new URLSearchParams(window.location.search);
             const message = urlParams.get("message");
-            
+
             if (message) {
                 alert(message);
             }
@@ -86,18 +95,19 @@
         });
 
         function deleteRow(button, fieldName) {
-    const row = button.closest('tr');
-    console.log(row);
-    
-    const hiddenInput = document.querySelector(`input[type="hidden"][name="${fieldName}"]`);
-    console.log(hiddenInput);
-    hiddenInput.remove();
-    counter--;
+            const row = button.closest('tr');
+            console.log(row);
 
-    row.remove();
-}
+            const hiddenInput = document.querySelector(`input[type="hidden"][name="${fieldName}"]`);
+            console.log(hiddenInput);
+            hiddenInput.remove();
+            counter--;
+
+            row.remove();
+        }
 
 
     </script>
 </body>
+
 </html>

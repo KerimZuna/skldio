@@ -27,32 +27,38 @@
             <div class="col-6">
                 <div class="square">
                     <a href="premjestanje/artikalpaleta.php">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/artikalpaletaa.png" alt="Icon 2">
-                    <h6>ARTIKAL-PALETA</h6>
+                        <img style="max-height:100%; max-width:100%;" src="ikone/artikalpaletaa.png" alt="Icon 2">
+                        <h6>ARTIKAL-PALETA</h6>
                     </a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="square">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/artikalregal.png" alt="Icon 3">
-                    <h6>ARTIKAL-REGAL</h6>
-                </div>
+                <a href="premjestanje/artikalregal.php">
+                    <div class="square">
+                        <img style="max-height:100%; max-width:100%;" src="ikone/artikalregal.png" alt="Icon 3">
+                        <h6>ARTIKAL-REGAL</h6>
+                    </div>
+                </a>
             </div>
             <div class="col-6">
-                <div class="square">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/kutijapaleta.png" alt="Icon 4">
-                    <h6>KUTIJA-PALETA</h6>
-                </div>
+                <a href="premjestanje/kutijapaleta.php">
+                    <div class="square">
+                        <img style="max-height:100%; max-width:100%;" src="ikone/kutijapaleta.png" alt="Icon 4">
+                        <h6>KUTIJA-PALETA</h6>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="square">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/kutijaregal.png" alt="Icon 5">
-                    <h6>KUTIJA-REGAL</h6>
-                </div>
+                <a href="premjestanje/kutijaregal.php">
+                    <div class="square">
+                        <img style="max-height:100%; max-width:100%;" src="ikone/kutijaregal.png" alt="Icon 5">
+                        <h6>KUTIJA-REGAL</h6>
+                    </div>
+                </a>
             </div>
             <div class="col-6">
                 <div class="square">

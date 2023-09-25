@@ -47,17 +47,17 @@ if (!isset($_SESSION["user_id"])) {
         <div class="row">
             <div class="col-6">
                 <div class="square">
-                <a href="izlazrobe.php">
-                    <img src="ikone/ikona10.png" alt="Icon 10">
-                    <h6>IZLAZ ROBE</h6>
+                    <a href="izlazrobe.php">
+                        <img src="ikone/ikona10.png" alt="Icon 10">
+                        <h6>IZLAZ ROBE</h6>
                     </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
                     <a href="historija.php">
-                    <img src="ikone/ikona6.png" alt="Icon 6">
-                    <h6>HISTORIJA</h6>
+                        <img src="ikone/ikona6.png" alt="Icon 6">
+                        <h6>HISTORIJA</h6>
                     </a>
                 </div>
             </div>
@@ -66,16 +66,16 @@ if (!isset($_SESSION["user_id"])) {
             <div class="col-6">
                 <div class="square">
                     <a href="izvjestaj.php">
-                    <img src="ikone/izvjestaj.png" alt="Icon 3">
-                    <h6>IZVJEŠTAJ</h6>
+                        <img src="ikone/izvjestaj.png" alt="Icon 3">
+                        <h6>IZVJEŠTAJ</h6>
                     </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
                     <a href="pretraga.php">
-                    <img src="ikone/pretraga.png" alt="Icon 4">
-                    <h6>PRETRAGA</h6>
+                        <img src="ikone/pretraga.png" alt="Icon 4">
+                        <h6>PRETRAGA</h6>
                     </a>
                 </div>
             </div>

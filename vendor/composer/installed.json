@@ -40,6 +40,8 @@
             "install-path": "../container-interop/container-interop"
         },
         {
+<<<<<<< HEAD
+=======
             "name": "mike42/escpos-php",
             "version": "v2.2",
             "version_normalized": "2.2.0.0",
@@ -102,6 +104,7 @@
             "install-path": "../mike42/escpos-php"
         },
         {
+>>>>>>> 0ce7764a707c14f33bc28774473029c971784320
             "name": "picqer/php-barcode-generator",
             "version": "v2.3.3",
             "version_normalized": "2.3.3.0",

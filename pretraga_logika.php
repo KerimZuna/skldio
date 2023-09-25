@@ -13,38 +13,48 @@ function generateTableHeader($columns)
 
 $searchTerm = $_POST['search'];
 
-// Specify the table you want to search in (artikli)
-$table = "artikli";
+$sql = "SHOW TABLES";
+$result = $conn->query($sql);
 
-// Generate a query to search in the specified table
-$query = "SELECT * FROM $table WHERE ";
-$columns = array(); // Store column names for WHERE clause
+$tables = array();
 
-// Get column names of the current table
-$columnsSql = "SHOW COLUMNS FROM $table";
-$columnsResult = $conn->query($columnsSql);
-
-while ($column = $columnsResult->fetch_assoc()) {
-    $columns[] = $column['Field'];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_row()) {
+        $tables[] = $row[0];
+    }
 }
-
-// Create a WHERE clause for each column
-$whereClauses = array();
-foreach ($columns as $column) {
-    $whereClauses[] = "$column = '$searchTerm'";
-}
-
-// Combine WHERE clauses with OR
-$query .= implode(" OR ", $whereClauses);
-
-// Execute the query
-$result = $conn->query($query);
 
 $searchResults = array();
 
-// Store the search results for this table
-while ($row = $result->fetch_assoc()) {
-    $searchResults[] = $row;
+foreach ($tables as $table) {
+    // Generate a query to search in each table
+    $query = "SELECT * FROM $table WHERE ";
+    $columns = array(); // Store column names for WHERE clause
+
+    // Get column names of the current table
+    $columnsSql = "SHOW COLUMNS FROM $table";
+    $columnsResult = $conn->query($columnsSql);
+
+    while ($column = $columnsResult->fetch_assoc()) {
+        $columns[] = $column['Field'];
+    }
+
+    // Create a WHERE clause for each column
+    $whereClauses = array();
+    foreach ($columns as $column) {
+        $whereClauses[] = "$column LIKE '%$searchTerm%'";
+    }
+
+    // Combine WHERE clauses with OR
+    $query .= implode(" OR ", $whereClauses);
+
+    // Execute the query
+    $result = $conn->query($query);
+
+    // Store the search results for this table
+    while ($row = $result->fetch_assoc()) {
+        $searchResults[] = $row;
+    }
 }
 
 $conn->close();
