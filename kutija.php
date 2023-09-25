@@ -31,7 +31,7 @@
 					<option value="9">9 </option>
 					<option value="10">10</option>
 				</select>
-				<br>
+				<input class="form-control mt-3 mb-3" style="width: 100%!important;" type="number" id="kapacitet" name="kapacitet" placeholder="Unesite kapacitet">
 				<center><button class="btn btn-primary w-100" name="dodaj" id="dodaj">DODAJ</button></center>
 				<br>
 		</form>

@@ -26,90 +26,85 @@ if (!isset($_SESSION["user_id"])) {
     <div class="container mt-2">
         <div class="row">
 
-            <div class="col-6"><a href="unos.php">
-                    <div class="square">
+            <div class="col-6">
+                <div class="square">
 
-
+                    <a href="unos.php">
                         <img src="ikone/ikona1.png" alt="Icon 1">
                         <h6>UNOS</h6>
-
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="col-6">
-                <a href="premjestanje.php">
-                    <div class="square">
-
+                <div class="square">
+                    <a href="premjestanje.php">
                         <img src="ikone/ikona2.png" alt="Icon 2">
                         <h6>PREMJEŠTANJE</h6>
-
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <a href="izlaz.php">
-                    <div class="square">
+                <div class="square">
+                    <a href="izlazrobe.php">
                         <img src="ikone/ikona10.png" alt="Icon 10">
                         <h6>IZLAZ ROBE</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="col-6">
-                <a href="historija.php">
-                    <div class="square">
+                <div class="square">
+                    <a href="historija.php">
                         <img src="ikone/ikona6.png" alt="Icon 6">
                         <h6>HISTORIJA</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <a href="izvjestaj.php">
-                    <div class="square">
+                <div class="square">
+                    <a href="izvjestaj.php">
                         <img src="ikone/izvjestaj.png" alt="Icon 3">
                         <h6>IZVJEŠTAJ</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="col-6">
-                <a href="pretraga.php">
-                    <div class="square">
+                <div class="square">
+                    <a href="pretraga.php">
                         <img src="ikone/pretraga.png" alt="Icon 4">
                         <h6>PRETRAGA</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-6">
-                <a href="barcode/index.php">
-                    <div class="square">
+                <div class="square">
+                    <a href="barcode/index.php">
                         <img src="ikone/ikona8.png" alt="Icon 8">
                         <h6>PRINT</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="col-6">
-                <a href="postavke.php">
-                    <div class="square">
-                        <img src="ikone/postavke.png" alt="Icon 5">
-                        <h6>POSTAVKE</h6>
-                    </div>
-                </a>
+                <div class="square">
+                    <img src="ikone/postavke.png" alt="Icon 5">
+                    <h6>POSTAVKE</h6>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <a href="logout.php">
-                    <div class="square">
+                <div class="square">
+                    <a href="logout.php">
                         <img src="ikone/ikona11.png" alt="Icon 9">
                         <h6>ODJAVA</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

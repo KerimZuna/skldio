@@ -3,101 +3,163 @@ include 'conn.php';
 
 $tableName = "historija";
 
-// Query to select only 'korisnik' and 'akcija' columns from the specified table
-$sql = "SELECT korisnik, akcija FROM $tableName";
-$result = $conn->query($sql);
 
-// Close the database connection (optional)
-$conn->close();
+$search = "";
+// Check if a search query is submitted
+if (isset($_POST['search'])) {
+    $search = mysqli_real_escape_string($conn, $_POST['search']);
+    $sql = "SELECT * FROM $tableName WHERE korisnik LIKE '%$search%' OR akcija LIKE '%$search%' OR datum_unosa LIKE '%$search%'";
+} else {
+    // Fetch all data from the database if no search query is provided
+    $sql = "SELECT korisnik, akcija,datum_unosa FROM $tableName";
+}
+
+$result = mysqli_query($conn, $sql);
+
+// Define a variable to store the ID of the record being edited
+$editRecordID = null;
+
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>HISTORIJA</title>
+    <title>WMS - AutoTarget - Historija</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+        *,
         body {
-            height: 100% !important;
-            background-color: #FBAD07 !important;
-            background-color: #FBAD07 !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 35px !important;
-            width: 100%;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            background-color: #fbad07;
         }
 
-        form {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
+        ::placeholder {
+            color: black;
+            opacity: 1;
+        }
 
+        html,
+        body {
+            height: 100%;
+            background-color: white;
+            overflow-x: hidden;
+            background-color: #fbad07;
+        }
+
+        .form-check-input[type=checkbox] {
+            border-radius: 1.25em !important;
+        }
+
+        label {
+            margin-top: 1rem;
+        }
+
+        .form-select .mt-3 {
+            margin-top: 0px !important;
+        }
+
+        input.form-control {
+            margin-top: 1rem;
+        }
+
+        .row {
+            align-items: center;
+        }
+
+        .col-md-12 {
+            display: flex;
         }
 
         table {
-            border: 2px black solid;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        td {
+            text-align: center;
+            font-size: 20px;
         }
 
         th {
             text-align: center;
-            padding: 10px;
-            border: 2px black solid;
+            font-size: 22px;
+            font-weight: 500;
         }
 
-        td {
-            border: 2px black solid;
+        table,
+        tr,
+        td,
+        th {
+            border: 1px black solid;
         }
 
-        .form-group label {
-            font-weight: bold !important;
-            color: #333 !important;
+
+        .container {
+            max-width: 1200px;
         }
 
-        .form-group {
-            margin-bottom: 0px;
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: black;
+            background-color: transparent;
+            border-collapse: collapse;
         }
 
-        .form-control {
-            width: 100% !important;
-            border-color: #FBAD07 !important;
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid black;
         }
 
-        .btn-primary {
-            background-color: #212529 !important;
-            border-color: #212529 !important;
-            color: #fff !important;
-            width: 100% !important;
-            font-size: 70px !important;
-        }
+        @media (max-width: 768px) {
+            td {
+                font-size: 15px;
+            }
 
-        .btn-primary:hover {
-            background-color: #f60 !important;
-            border-color: #f60 !important;
+            th {
+                font-size: 18px;
+            }
         }
-
-        .center-button {
-            text-align: center !important;
-        }
-
-        .naslov {
-            font-size: 80px;
-            margin-top: 200px !important;
-            margin-bottom: 50px !important;
-        }
-    </style>
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="index.php"><button class="btn btn-dark"
+                        style="height: fit-content; margin-top: 16px; margin-right:10px;">Nazad</button></a>
+                <form method="POST" class="mb-3" style="display: inline-block; width: 100%;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pretraga" name="search"
+                            value="<?php echo $search; ?>">
+                        <button type="submit" class="btn btn-dark"
+                            style="height: fit-content; margin-top: auto; margin-right: 0px">Pretraži</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <table>
         <thead>
             <tr>
                 <!-- Display column headers for 'korisnik' and 'akcija' only -->
                 <th>Korisnik</th>
                 <th>Akcija</th>
+                <th>Vrijeme</th>
             </tr>
         </thead>
         <tbody>
@@ -107,6 +169,7 @@ $conn->close();
                 echo "<tr>";
                 echo "<td>{$row['korisnik']}</td>";
                 echo "<td>{$row['akcija']}</td>";
+                echo "<td>{$row['datum_unosa']}</td>";
                 echo "</tr>";
             }
             ?>
