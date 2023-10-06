@@ -36,41 +36,60 @@
         <div class="row">
             <div class="col-6">
                 <div class="square">
+                    <a href="premjestanje/artikalregal.php">
                     <img style="max-height:100%; max-width:100%;" src="ikone/artikalregal.png" alt="Icon 3">
                     <h6>ARTIKAL-REGAL</h6>
+                    </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
+                    <a href="premjestanje/kutijapaleta.php">
                     <img style="max-height:100%; max-width:100%;" src="ikone/kutijapaleta.png" alt="Icon 4">
                     <h6>KUTIJA-PALETA</h6>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
                 <div class="square">
+                    <a href="premjestanje/kutijaregal.php">
                     <img style="max-height:100%; max-width:100%;" src="ikone/kutijaregal.png" alt="Icon 5">
                     <h6>KUTIJA-REGAL</h6>
+                    </a>
                 </div>
             </div>
             <div class="col-6">
                 <div class="square">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/regalregal.png" alt="Icon 6">
-                    <h6>REGAL-REGAL</h6>
+                    <a href="premjestanje/paletaregal.php">
+                    <img style="max-height:100%; max-width:100%;" src="ikone/paletaregal.png" alt="Icon 6">
+                    <h6>PALETA-REGAL</h6>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="row">
         <div class="col-6">
+                <a href="premjestanje/regalregal.php">
+                    <div class="square">
+                        <img style="max-height:100%; max-width:100%;" src="ikone/regalregal.png" alt="Icon 3">
+                        <h6>REGAL-REGAL</h6>
+                    </div>
+                </a>
+            </div>
+        <div class="col-6">
             <a href="premjestanje/lokacija.php">
                 <div class="square">
-                    <img style="max-height:100%; max-width:100%;" src="ikone/lokacijakutije.png" alt="Icon 6">
+                    <img style="max-height:100%; max-width:100%; margin-bottom:30px;margin-top:15px;"src="ikone/lokacijakutije.png" alt="Icon 6">
                     <h6>LOKACIJA</h6>
                 </div>
                 </a>
             </div>
-            <div class="col-6">
+            
+        </div>
+        <div class="row">
+        <div class="col-6">
                 <a href="index.php">
                     <div class="square">
                         <img src="ikone/nazad.png" alt="Icon 3">

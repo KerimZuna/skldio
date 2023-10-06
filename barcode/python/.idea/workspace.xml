@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67fafc63-210e-4f5e-8588-fca219e45009" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../izlaz_logika.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../izlazrobe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/print/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/print/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dodajkutiju.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../dodajkutiju.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../historija.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../historija.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../index.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kutija.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../kutija.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dodajregal.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../dodajregal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ikone/paletaregal.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../ikone/paletaregal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../izvjestaj_logika.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../izvjestaj_logika.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../premjestanje.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../premjestanje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../premjestanje/logika/artikalkutija.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../premjestanje/logika/artikalkutija.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../premjestanje/logika/artikalpaleta.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../premjestanje/logika/artikalpaleta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../regal.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../regal.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +93,7 @@
       <workItem from="1695299879212" duration="3000" />
       <workItem from="1695370343632" duration="54000" />
       <workItem from="1695388970587" duration="390000" />
+      <workItem from="1696418985803" duration="99000" />
     </task>
     <servers />
   </component>

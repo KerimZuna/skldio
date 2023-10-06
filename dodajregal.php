@@ -5,24 +5,29 @@ include 'conn.php';
     $korisnik = $_SESSION["username"];
     echo $korisnik;
 
-if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
-    $broj = $_POST['broj'];
-    $lokacija = 'Garaža';
+if (isset($_POST['dodaj'])) {
+    $skladiste=$_POST['skladiste'];
+    $regal_red=$_POST['regal_red'];
+    $kolona_regal=$_POST['regal_kolona'];
+    $regal_polje=$_POST['regal_polje'];
+    $regal_polje_kolona=$_POST['regal_polje_kolona'];
+    $lokacija = 'Hala';
+    $kapacitet = $_POST['kapacitet'];
+    $slobodno = $_POST['kapacitet'];
 
-    for ($i = 1; $i <= $broj; $i++) {
-        $sql = "INSERT INTO regali (lokacija) VALUES ('$lokacija')";
+    $kolona_regal=(string)$kolona_regal;
+    $kolona_regal=mb_strtoupper($kolona_regal, 'UTF-8');
+        $sql = "INSERT INTO regali (skladiste,regal_red,regal_kolona,regal_polje,regal_polje_kolona,lokacija,kapacitet,slobodno) VALUES ('$skladiste','$regal_red','$kolona_regal','$regal_polje','$regal_polje_kolona','$lokacija','$kapacitet','$slobodno')";
 
         if ($conn->query($sql) === TRUE) {
             $last_id = $conn->insert_id;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
-            break; // Exit the loop if there's an error in one iteration
         }
 
         $sql_other_table = "INSERT INTO historija (korisnik, akcija, id_regala) VALUES ('$korisnik', 'Dodavanje regala $last_id', '$last_id')";
         if ($conn->query($sql_other_table) !== TRUE) {
             echo "Error: " . $sql_other_table . "<br>" . $conn->error;
-            break; // Exit the loop if there's an error in one iteration
         }
 
         $code = $last_id;
@@ -31,10 +36,10 @@ if (isset($_POST['dodaj']) && isset($_POST['broj'])) {
         sleep(2);
         $printer = "192.168.0.195";
     
-        $command = 'python C:\xampp\htdocs\dio\barcode\python\print\printaj.py';
+        $command = 'python C:\Users\farex\OneDrive\Desktop\printanje\print\regalPrint.py';
 
         exec($command);
-    }
+    
     header("Location: regal.php");
 }
     

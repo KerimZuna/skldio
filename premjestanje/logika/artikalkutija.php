@@ -12,7 +12,7 @@ if (isset($_POST['premjesti'])) {
     }
 
     foreach ($_POST['idArtikla'] as $key => $idArtikla) {
-        $query = "SELECT lokacija,kapacitet,slobodno FROM kutije WHERE kutija_id = '$idKutije'";
+        $query = "SELECT * FROM kutije WHERE kutija_id = '$idKutije'";
         $result = $conn->query($query);
 
         if ($result === false) {
@@ -22,6 +22,8 @@ if (isset($_POST['premjesti'])) {
             $lokacija = $row['lokacija'];
             $kapacitet = $row['kapacitet'];
             $slobodno = $row['slobodno'];
+            $id_palete = $row['paleta_id'];
+            $id_regala = $row['regal_id'];
 
             $artikliquery = "SELECT id_artikla, id_kutije FROM artikli WHERE id_artikla = '$idArtikla'";
             $rezultat = $conn->query($artikliquery);
@@ -46,8 +48,8 @@ if (isset($_POST['premjesti'])) {
                         echo "Error: " . $sql_kutije . "<br>" . $conn->error;
                     }
                 }  
-            $sql = "INSERT INTO artikli (id_artikla, id_kutije, lokacija)
-            VALUES ('$idArtikla', '$idKutije', '$lokacija')";
+            $sql = "INSERT INTO artikli (id_artikla, id_kutije, lokacija,id_palete,id_regala)
+            VALUES ('$idArtikla', '$idKutije', '$lokacija','$id_palete','$id_regala')";
                 
                 if ($conn->query($sql) === TRUE) {
                     if ($conn->affected_rows > 0) {
@@ -94,7 +96,9 @@ if (isset($_POST['premjesti'])) {
 
             $sql_update = "UPDATE artikli
             SET id_kutije = '$idKutije',
-                lokacija = '$lokacija'
+                lokacija = '$lokacija',
+                id_palete = '$id_palete',
+                id_regala = '$id_regala'
             WHERE id_artikla = '$idArtikla'";
 
             if ($conn->query($sql_update) === TRUE) {

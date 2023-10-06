@@ -150,6 +150,7 @@ if (isset($_POST['submit'])) {
         $row1 = $result1->fetch_assoc();
         $slobodno = $row1['slobodno'];
         $kapacitet = $row1['kapacitet'];
+        $lokacija = $row1['lokacija'];
         $sql2 = "SELECT * FROM artikli WHERE id_kutije = '$inputNumber'";
         $result2 = $conn->query($sql2);
         if ($result2->num_rows > 0) {
@@ -167,10 +168,11 @@ if (isset($_POST['submit'])) {
             echo "</table><br>";
             echo "<p style='text-align: center; font-size: 20px;'><strong>Kapacitet:</strong> " . $kapacitet . "</p>";
             echo "<p style='text-align: center; font-size: 20px;'><strong>Slobodno:</strong> " . $slobodno . "</p>";
+            echo "<p style='text-align: center; font-size: 20px;'><strong>Lokacija:</strong> " . $lokacija . "</p>";
             echo "<div style='display: flex; justify-content: center; '><a href='izvjestaj.php' class='btn btn-primary'>Nazad</a></div>";
             echo "</div>";
         } else {
-            echo "No data found in Database 2 for ID: " . $inputNumber . "<br>";
+            echo "Nema kutije sa ID: " . $inputNumber . "<br>";
         }
     } else {
         header("Location: izvjestaj.php?message=Nema+kutije+sa+tim+ID");

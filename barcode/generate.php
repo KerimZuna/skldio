@@ -13,9 +13,10 @@ if (isset($_POST['generate'])) {
 
     $sql_other_table = "INSERT INTO historija (korisnik, akcija) VALUES ('$korisnik', 'Printanje koda: $code')";
             if ($conn->query($sql_other_table) !== TRUE) {
-                echo "Error: " . $sql_other_table . "<br>" . $conn->error;
+                echo "Error: " . $sql_other_table . "<br>" . $conn->error;        
             }
     header("Location: index.php");
     }
 
+    header("Location: index.php");
 ?>
