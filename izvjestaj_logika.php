@@ -141,19 +141,18 @@ include 'conn.php';
 $korisnik = $_SESSION["username"];
 
 if (isset($_POST['submit'])) {
-    // Get the input value
     $inputNumber = $_POST['inputNumber'];
-    // Retrieve data from the first database
-    $sql1 = "SELECT slobodno, lokacija, kapacitet FROM kutije WHERE kutija_id = '$inputNumber'";
+    $sql1 = "SELECT * FROM kutije WHERE kutija_id = '$inputNumber'";
     $result1 = $conn->query($sql1);
     if ($result1->num_rows > 0) {
         $row1 = $result1->fetch_assoc();
         $slobodno = $row1['slobodno'];
         $kapacitet = $row1['kapacitet'];
         $lokacija = $row1['lokacija'];
+        $id_regala = $row1['paleta_id'];
+        $id_palete = $row1['regal_id'];
         $sql2 = "SELECT * FROM artikli WHERE id_kutije = '$inputNumber'";
         $result2 = $conn->query($sql2);
-        if ($result2->num_rows > 0) {
             echo "<div class='container'>";
             echo "<h2 style='text-align: center;'>Artikli u kutiji " . $inputNumber . ":</h2>";
             echo "<table class='table table-striped'>";
@@ -166,16 +165,15 @@ if (isset($_POST['submit'])) {
             }
             
             echo "</table><br>";
+            echo "<p style='text-align: center; font-size: 20px;'><strong>ID Regala:</strong> " . $id_regala . "</p>";
+            echo "<p style='text-align: center; font-size: 20px;'><strong>ID Palete:</strong> " . $id_palete . "</p>";
             echo "<p style='text-align: center; font-size: 20px;'><strong>Kapacitet:</strong> " . $kapacitet . "</p>";
             echo "<p style='text-align: center; font-size: 20px;'><strong>Slobodno:</strong> " . $slobodno . "</p>";
             echo "<p style='text-align: center; font-size: 20px;'><strong>Lokacija:</strong> " . $lokacija . "</p>";
             echo "<div style='display: flex; justify-content: center; '><a href='izvjestaj.php' class='btn btn-primary'>Nazad</a></div>";
-            echo "</div>";
-        } else {
-            echo "Nema kutije sa ID: " . $inputNumber . "<br>";
+            echo "</div>"; 
         }
     } else {
         header("Location: izvjestaj.php?message=Nema+kutije+sa+tim+ID");
-    }
 }
 ?>

@@ -68,7 +68,8 @@ if (isset($_POST['premjesti'])) {
 
                         $sql_update = "UPDATE kutije
                         SET paleta_id = '$idPalete',
-                            lokacija = '$lokacija'
+                            lokacija = '$lokacija',
+                            regal_id = '$id_regala'
                         WHERE kutija_id = '$idKutije'";
 
                         if ($conn->query($sql_update) === TRUE) {

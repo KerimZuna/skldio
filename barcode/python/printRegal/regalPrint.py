@@ -85,7 +85,7 @@ def print_placard():
                 output = basic.generate(o=inv).render().getvalue()
                 tmpfile.write(output)  # /tmp in GNU/Linux,  %temp% in Window
                 print(f'Printing: {tmpfile.name}')
-                win32api.ShellExecute(0, 'print', tmpfile.name, f'/d:"{win32print.GetDefaultPrinter()}"', '.', 0)
+                win32api.ShellExecute(0, 'print', tmpfile.name, f'/d:"192.168.0.195"', '.', 0)
                 time.sleep(2)
         else:
             print("No matching row found")

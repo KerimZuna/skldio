@@ -65,7 +65,7 @@ def print_placard():
         tmpfile.write(output)  # /tmp in GNU/Linux,  %temp% in Windows
         # time.sleep(2)
         print(f'Printing: {tmpfile.name}')
-        win32api.ShellExecute(0, 'print', tmpfile.name, f'/d:"{win32print.GetDefaultPrinter()}"', '.', 0)
+        win32api.ShellExecute(0, 'print', tmpfile.name, f'/d:"192.168.0.195"', '.', 0)
 
 if __name__ == "__main__":
     print_placard()

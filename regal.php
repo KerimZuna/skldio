@@ -13,13 +13,13 @@
 	<style>
 		label{
 			display: flex;
-    justify-content: center;
+            justify-content: center;
 		}
 	</style>
 </head>
 
 <body>
-	<div class="col-md-6 well vh-100">
+	<div class="col-md-6 well vh-200">
 		<form method="POST" enctype="multipart/form-data" action="dodajregal.php" style="flex-direction: column;">
 		<div class="form-group">
                 <label for="skladiste">Skladište</label>
