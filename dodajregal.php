@@ -32,11 +32,12 @@ if (isset($_POST['dodaj'])) {
 
         $code = $last_id;
 
-        file_put_contents('C:\xampp\htdocs\dio\barcode\python\print\output.txt', $code);
+        file_put_contents('C:\xampp\htdocs\dio\barcode\python\printRegal\outputKod.txt', $code);
+        file_put_contents('C:\xampp\htdocs\dio\barcode\python\printRegal\outputTekst.txt', $skladiste . "-" . $regal_red . "-" . $kolona_regal . "-" . $regal_polje . "/" . $regal_polje_kolona);
         sleep(2);
         $printer = "192.168.0.195";
     
-        $command = 'python C:\Users\farex\OneDrive\Desktop\printanje\print\regalPrint.py';
+        $command = 'python C:\xampp\htdocs\dio\barcode\python\printRegal\print.py';
 
         exec($command);
     
